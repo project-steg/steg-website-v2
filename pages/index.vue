@@ -1,73 +1,34 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        stegHP
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <div>
+    <div v-for="elem in item" :key="elem.id"> 
+      <example :news="elem" />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import axios from "axios";
+import example from "@/components/example.vue";
+export default {
+  async asyncData() {
+    const { data } = await axios.get(
+      "https://steg.microcms.io/api/v1/news?limit=99",
+      {
+        headers: {
+          "X-API-KEY": "15fcbc0e-ef8a-4e6f-8111-0811e534fe5d"
+        }
+      }
+    );
+    return {
+      item: data.contents
+    };
+  },
+  components: {
+    example
+  },
+}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
