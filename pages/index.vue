@@ -49,5 +49,9 @@ export default {
 </script>
 
 <style lang="scss">
-
+@include mq(md) {
+    .html{
+      font-size: 13px;
+    }
+}
 </style>
