@@ -1,14 +1,26 @@
 <template>
   <div>
-    <div v-for="elem in item" :key="elem.id"> 
-      <example :news="elem" />
-    </div>
+    <top />
+    <news />
+    <about />
+    <partners />
+    <works />
+    <blog />
+    <members />
+    <contact />
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import example from "@/components/example.vue";
+import top from "@/components/top.vue";
+import news from "@/components/news.vue";
+import about from "@/components/about.vue";
+import partners from "@/components/partners.vue";
+import works from "@/components/works.vue";
+import blog from "@/components/blog.vue";
+import members from "@/components/members.vue";
+import contact from "@/components/contact.vue";
 export default {
   async asyncData() {
     const { data } = await axios.get(
@@ -24,11 +36,18 @@ export default {
     };
   },
   components: {
-    example
+    top,
+    news,
+    about,
+    partners,
+    works,
+    blog,
+    members,
+    contact,
   },
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>

@@ -1,0 +1,19 @@
+$breakpoints: (
+  "sm": "screen and (min-width: 480px)",
+  "md": "screen and (min-width: 896px)",
+  "lg": "screen and (min-width: 1024px)",
+  "xl": "screen and (min-width: 1200px)"
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* how to use
+@include mq(md) {
+    css
+}
+*/
+$textColor: #17171B;
