@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "vue-scrollto": "^2.18.2"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",

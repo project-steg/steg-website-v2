@@ -25,7 +25,7 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap"
+          "https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap"
       },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
@@ -39,6 +39,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~plugins/vue-scrollto'
   ],
   /*
   ** Auto import components

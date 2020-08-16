@@ -23,6 +23,7 @@ time, mark, audio, video {
     border:0;
     outline:0;
     font-size:16px;
+    font-weight: 400;
     vertical-align:baseline;
     background:transparent;
     font-family: 'Noto Sans JP';
