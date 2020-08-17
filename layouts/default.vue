@@ -127,7 +127,7 @@
   display: flex;
 }
 .header-right-contents {
-  margin-right: 30px;
+  margin-right: 35px;
   text-align: center;
   cursor: pointer;
 }

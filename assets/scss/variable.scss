@@ -2,7 +2,7 @@ $breakpoints: (
   "sm": "screen and (max-width: 480px)",
   "md": "screen and (max-width: 896px)",
   "lg": "screen and (max-width: 1024px)",
-  "xl": "screen and (max-width: 1200px)"
+  "xl": "screen and (max-width: 1240px)"
 ) !default;
 
 @mixin mq($breakpoint: md) {
@@ -16,6 +16,6 @@ $breakpoints: (
     css
 }
 */
-$textColor: #17171B;
-$mainColor: #20D8BA;
-$subColor: #46465D;
+$textColor: #17171b;
+$mainColor: #20d8ba;
+$subColor: #46465d;

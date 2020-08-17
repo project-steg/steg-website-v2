@@ -1,3 +1,5 @@
+require('dotenv').config();
+const { API_KEY } = process.env;
 
 export default {
   /*
@@ -65,5 +67,8 @@ export default {
     scss: ["~/assets/scss/variable.scss"]
   },
   build: {
+  },
+  env: {
+    API_KEY
   }
 }

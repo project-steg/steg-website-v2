@@ -1,7 +1,7 @@
 <template>
   <div>
     <top />
-    <news />
+    <news :news="item" />
     <about />
     <partners />
     <works />
@@ -27,7 +27,7 @@ export default {
       "https://steg.microcms.io/api/v1/news?limit=99",
       {
         headers: {
-          "X-API-KEY": "15fcbc0e-ef8a-4e6f-8111-0811e534fe5d"
+          "X-API-KEY": process.env.API_KEY
         }
       }
     );

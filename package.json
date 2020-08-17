@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
     "axios": "^0.19.2",
     "nuxt": "^2.14.0",
     "vue-scrollto": "^2.18.2"
