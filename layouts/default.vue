@@ -90,7 +90,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .header-container {
   width: 100%;
   height: 75px;
@@ -134,12 +134,12 @@
 
 .header-right-contents-en{
   font-size: 0.8rem;
-  color: #46465D;
+  color: $subColor;
 }
 
 .header-right-contents-jp{
   font-size: 1rem;
-  color: #17171B;
+  color: $textColor;
 }
 
 .header-responsive{
@@ -147,6 +147,7 @@
   width: 100%;
   height: 65px;
   background: rgba(255, 255, 255, 0.85);
+  z-index: 100;
 }
 
 @media screen and (min-width: 1025px) {
@@ -171,7 +172,7 @@
   width: 35px;
   height: 5px;
   border-radius: 3px;
-  background-color: #17171b;
+  background-color: $textColor;
   margin-top: 7px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -232,7 +233,7 @@ nav {
 }
 nav a {
   margin-top: 1.25rem;
-  color: #17171b;
+  color: $textColor;
   opacity: 0;
   text-decoration: none;
   font-size: 1.5rem;
