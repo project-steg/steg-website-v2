@@ -99,6 +99,7 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 100;
 }
 @media screen and (max-width: 1024px) {
   .header-container {
