@@ -4,7 +4,9 @@
         <div class="partners-heading-jp">協力団体</div>
         <div class="partners-container">
             <div class="partners-content" v-for="elem in partners" :key="elem.id">
-                <div class="partners-content-img"><img :src="elem.partnersImg.url" :alt="elem.partnersName"></div>
+                <a :href="elem.partnersUrl" target="_blank" rel="noopener noreferrer">
+                    <div class="partners-content-img"><img :src="elem.partnersImg.url" :alt="elem.partnersName"></div>
+                </a>
                 <div class="partners-content-name">{{elem.partnersName}}</div>
                 <div class="partners-content-introduction">{{elem.partnersText}}</div>
             </div>
@@ -24,6 +26,12 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 80px 0;
+    @include mq(lg) {
+        padding: 60px 0;
+    }
+    @include mq(sm) {
+        padding: 40px 0;
+    }
 }
 
 .partners-heading-en{
@@ -44,7 +52,65 @@ export default {
 
 .partners-container{
     display: flex;
-    align-items: center;
-    padding: 40px 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+.partners-content{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 0;
+    margin: 0 50px;
+    @include mq(sm) {
+        width: 130px;
+        padding: 20px 0 0;
+        margin: 0 10px;
+    }
+    
+}
+
+.partners-content-img{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid rgba(#20d8ba,0.5);
+    border-radius: 50%;
+    @include mq(sm) {
+        width: 120px;
+        height: 120px;
+        border: 5px solid rgba(#20d8ba,0.5);
+    }
+    img{
+        width: 175px;
+        height: auto;
+        @include mq(sm) {
+            width: 75px;
+        }
+    }
+}
+
+.partners-content-name{
+    font-size: 1.2rem;
+    color: $textColor;
+    border-bottom: 2px solid $mainColor;
+    padding-bottom: 10px;
+    margin: 30px 0;
+    @include mq(sm) {
+        display: none;
+    }
+}
+
+.partners-content-introduction{
+    font-size: 1rem;
+    color: $textColor;
+    text-align: center;
+    @include mq(sm) {
+        display: none;
+    }
+}
+    
 </style>
