@@ -3,7 +3,7 @@
         <div class="about-head">
             <div class="about-img"></div>
             <div class="about-steg">
-                <div class="about-heading">ABOUT</div>
+                <div class="about-heading"><h2>ABOUT</h2></div>
                 <div class="about-introduction">Stegは、ITエンジニアリングなどを通して社会に挑戦し、成長の過程を大切にする学生ITエンジニア団体です</div>
             </div>
         </div>
@@ -84,19 +84,23 @@ export default {
 .about-heading{
     height: 30%;
     width: 100%;
-    font-size: 6rem;
-    font-weight: 700;
-    color: $textColor;
     padding-left: 60px;
     background: white;
     @include mq(lg) {
         height: 50%;
         padding: 0;
-        font-size: 3rem;
         background: $bgColor;
         display: flex;
         align-items: flex-end;
         justify-content: center;
+    }
+    h2{
+        font-size: 6rem;
+        font-weight: 700;
+        color: $textColor;
+        @include mq(lg) {
+            font-size: 3rem;
+        }
     }
 
 }
