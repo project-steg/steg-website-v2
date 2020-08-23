@@ -17,6 +17,7 @@
 export default {
     props: ["news"],
 }
+
 </script>
 
 <style lang="scss" scoped>

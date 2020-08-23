@@ -1,9 +1,9 @@
 <template>
   <div>
     <top />
-    <news :news="item" />
+    <news :news="news" />
     <about />
-    <partners />
+    <partners :partners="partners" />
     <works />
     <blog />
     <members />
@@ -23,17 +23,21 @@ import members from "@/components/members.vue";
 import contact from "@/components/contact.vue";
 export default {
   async asyncData() {
-    const { data } = await axios.get(
-      "https://steg.microcms.io/api/v1/news?limit=99",
-      {
-        headers: {
-          "X-API-KEY": process.env.API_KEY
-        }
-      }
-    );
+    const getNews = axios.get('https://steg.microcms.io/api/v1/news?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
+    const getPartners = axios.get('https://steg.microcms.io/api/v1/partners?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
+
+    let news_data;
+    let partners_data;
+
+    await Promise.all([getNews, getPartners]).then(function(values) {
+      news_data = values[0].data.contents
+      partners_data = values[1].data.contents
+    })
+
     return {
-      item: data.contents
-    };
+      news: news_data,
+      partners: partners_data
+    }
   },
   components: {
     top,
