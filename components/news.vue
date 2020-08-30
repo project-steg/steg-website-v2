@@ -3,11 +3,11 @@
         <div class="news-heading"><h2>NEWS</h2></div>
         <div class="news-container">
             <div class="news-content" v-for="elem in news" :key="elem.id">
-                <div class="news-information">
-                    <div class="date">{{elem.newsDate}}</div>
-                    <div class="type">{{elem.newsCategory}}</div>
+                <div class="news-content-information">
+                    <div class="news-content-date">{{elem.newsDate}}</div>
+                    <div class="news-content-type">{{elem.newsCategory}}</div>
                 </div>
-                <div class="news-article">{{elem.newsContents}}</div>
+                <div class="news-content-article">{{elem.newsContents}}</div>
             </div>
         </div>
     </div>
@@ -89,11 +89,11 @@ export default {
     }
 }
 
-.news-information{
+.news-content-information{
     display: flex;
 }
 
-.date{
+.news-content-date{
     color: $textColor;
     font-size: 1rem;
     padding: 0 15px;
@@ -103,7 +103,7 @@ export default {
     }
 }
 
-.type{
+.news-content-type{
     color: $mainColor;
     font-size: 1rem;
     padding: 0 15px;
@@ -113,7 +113,7 @@ export default {
     }
 }
 
-.news-article{
+.news-content-article{
     width: 100%;
     color: $textColor;
     font-size: 1rem;
