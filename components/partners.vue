@@ -63,6 +63,9 @@ export default {
     align-items: center;
     padding: 40px 0 0;
     margin: 0 50px;
+    @include mq(lg) {
+        width: 256px;
+    }
     @include mq(sm) {
         width: 130px;
         padding: 20px 0 0;
@@ -72,21 +75,29 @@ export default {
 }
 
 .partners-content-img{
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 10px solid rgba(#20d8ba,0.5);
+    border: 10px solid rgba($mainColor,0.5);
     border-radius: 50%;
+    @include mq(lg) {
+        width: 240px;
+        height: 240px;
+        border: 8px solid rgba($mainColor,0.5);
+    }
     @include mq(sm) {
         width: 120px;
         height: 120px;
-        border: 5px solid rgba(#20d8ba,0.5);
+        border: 5px solid rgba($mainColor,0.5);
     }
     img{
-        width: 175px;
+        width: 164px;
         height: auto;
+        @include mq(lg) {
+            width: 140px;
+        }
         @include mq(sm) {
             width: 75px;
         }

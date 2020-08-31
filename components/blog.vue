@@ -11,35 +11,14 @@
             </a>
         </div>
         <div class="blog-container">
-            <a class="blog-content">
-                <img src="/img/mainVisual.jpg" alt="">
+            <a class="blog-content" :href='"https://blog.team-steg.com/articles/" + elem.id' target="_blank" rel="noopener noreferrer" v-for="elem in filteredItems(blog)" :key="elem.id">
+                <img :src="elem.image.url" :alt="elem.title">
                 <div class="blog-content-items">
                     <div class="blog-content-information">
-                        <div class="blog-content-date">2020.05.30</div>
-                        <div class="blog-content-type">イベント</div>
+                        <div class="blog-content-date">{{formatDate(elem.createdAt)}}</div>
+                        <div class="blog-content-type">{{elem.category}}</div>
                     </div>
-                    <div class="blog-content-title">サポーターズ主催 エンジニア1on1面談イベントに参加してきました</div>
-                </div>
-            </a>
-
-            <a class="blog-content">
-                <img src="/img/mainVisual.jpg" alt="">
-                <div class="blog-content-items">
-                    <div class="blog-content-information">
-                        <div class="blog-content-date">2020.05.30</div>
-                        <div class="blog-content-type">イベント</div>
-                    </div>
-                    <div class="blog-content-title">サポーターズ主催 エンジニア1on1面談イベントに参加してきました</div>
-                </div>
-            </a>
-            <a class="blog-content">
-                <img src="/img/mainVisual.jpg" alt="">
-                <div class="blog-content-items">
-                    <div class="blog-content-information">
-                        <div class="blog-content-date">2020.05.30</div>
-                        <div class="blog-content-type">イベント</div>
-                    </div>
-                    <div class="blog-content-title">サポーターズ主催 エンジニア1on1面談イベントに参加してきました</div>
+                    <div class="blog-content-title">{{elem.title}}</div>
                 </div>
             </a>     
 
@@ -52,8 +31,18 @@
 </template>
 
 <script>
+import dayjs from 'dayjs';
 export default {
-    
+    props: ["blog"],
+    methods: {
+        formatDate (date) {
+            return dayjs(date).format("YYYY.MM.DD");
+        },
+        filteredItems: function (blog) {
+            return this.blog.slice(0, 3)
+        }
+
+    },
 }
 </script>
 
@@ -69,6 +58,9 @@ export default {
     }
     @include mq(sm) {
         padding: 40px 0;
+    }
+    a{
+        text-decoration: none;
     }
 }
 
@@ -112,12 +104,14 @@ export default {
 
 
 .blog-container{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 40px 0;
     @include mq(sm) {
         padding: 0;
+        justify-content: stretch;
     }
 }
 
@@ -126,10 +120,16 @@ export default {
     @include mq(sm) {
         display: flex;
         padding: 10px 20px;
+        width: 100%;
     }
     img{
         width: 400px;
         height: 250px;
+        object-fit: cover;
+        @include mq(lg) {
+            width: 300px;
+            height: 187px;
+        }
         @include mq(sm) {
             width: 140px;
             height: 85px;
@@ -140,8 +140,11 @@ export default {
 .blog-content-items{
     width: 400px;
     padding: 10px;
+    @include mq(lg) {
+        width: 300px;
+    }
     @include mq(sm) {
-        width: auto;
+        width: 100%;
     }
 }
 
@@ -156,7 +159,7 @@ export default {
 }
 
 .blog-content-type{
-    width: 60px;
+    padding: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
