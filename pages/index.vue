@@ -1,5 +1,6 @@
 <template>
   <div>
+    <headerVue />
     <top />
     <news :news="news" />
     <about />
@@ -13,6 +14,7 @@
 
 <script>
 import axios from "axios";
+import headerVue from "@/components/header.vue";
 import top from "@/components/top.vue";
 import news from "@/components/news.vue";
 import about from "@/components/about.vue";
@@ -48,6 +50,7 @@ export default {
     }
   },
   components: {
+    headerVue,
     top,
     news,
     about,
@@ -61,9 +64,5 @@ export default {
 </script>
 
 <style lang="scss">
-@include mq(md) {
-    .html{
-      font-size: 13px;
-    }
-}
+
 </style>
