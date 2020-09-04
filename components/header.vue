@@ -72,42 +72,20 @@
         <div class="nav">
             <div class="nav-wrapper">
             <nav>
-                <nuxt-link tag="a" v-scroll-to="'#top'" to>
-                <label class="pointer" for="toggle">HOME</label>
-                </nuxt-link>
-                <nuxt-link tag="a" v-scroll-to="'#news'" to>
-                <label class="pointer" for="toggle">NEWS</label>
-                </nuxt-link>
-                <nuxt-link tag="a" v-scroll-to="'#about'" to>
-                <label class="pointer" for="toggle">ABOUT</label>
-                </nuxt-link>
-                <nuxt-link tag="a" v-scroll-to="'#partners'" to>
-                <label class="pointer" for="toggle">PARTNERS</label>
-                </nuxt-link>
-                <nuxt-link tag="a" v-scroll-to="'#works'" to>
-                <label class="pointer" for="toggle">WORKS</label>
-                </nuxt-link>
-                <nuxt-link tag="a" v-scroll-to="'#blog'" to>
-                <label class="pointer" for="toggle">BLOG</label>
-                </nuxt-link>
-                <nuxt-link tag="a" v-scroll-to="'#members'" to>
-                <label class="pointer" for="toggle">MEMBERS</label>
-                </nuxt-link>
-                <nuxt-link tag="a" v-scroll-to="'#contact'" to>
-                <label class="pointer" for="toggle">CONTACT</label>
-                </nuxt-link>
+                <nuxt-link tag="a" v-scroll-to="'#top'" to><label class="pointer" for="toggle">HOME</label></nuxt-link>
+                <nuxt-link tag="a" v-scroll-to="'#news'" to><label class="pointer" for="toggle">NEWS</label></nuxt-link>
+                <nuxt-link tag="a" v-scroll-to="'#about'" to><label class="pointer" for="toggle">ABOUT</label></nuxt-link>
+                <nuxt-link tag="a" v-scroll-to="'#partners'" to><label class="pointer" for="toggle">PARTNERS</label></nuxt-link>
+                <nuxt-link tag="a" v-scroll-to="'#works'" to><label class="pointer" for="toggle">WORKS</label></nuxt-link>
+                <nuxt-link tag="a" v-scroll-to="'#blog'" to><label class="pointer" for="toggle">BLOG</label></nuxt-link>
+                <nuxt-link tag="a" v-scroll-to="'#members'" to><label class="pointer" for="toggle">MEMBERS</label></nuxt-link>
+                <nuxt-link tag="a" v-scroll-to="'#contact'" to><label class="pointer" for="toggle">CONTACT</label></nuxt-link>
             </nav>
             </div>
         </div>
-        </div>
-    </div>
+    </div>    
+  </div>
 </template>
-
-<script>
-export default {
-    
-}
-</script>
 
 <style lang="scss">
 .header-container {
@@ -194,40 +172,34 @@ export default {
   border-radius: 3px;
   background-color: $textColor;
   margin-top: 7px;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 #toggle {
   display: none;
 }
 #toggle:checked + .hamburger .top {
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   margin-top: 22.5px;
 }
 #toggle:checked + .hamburger .meat {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   margin-top: -5px;
 }
 #toggle:checked + .hamburger .bottom {
-  -webkit-transform: scale(0);
   transform: scale(0);
 }
 #toggle:checked + .hamburger + .nav {
-  top: 0;
+  right: 0;
 }
 .nav {
   position: fixed;
-  width: 100%;
+  width: 60%;
   height: 100%;
   background-color: #f7f7f7;
-  top: -100%;
-  left: 0;
-  right: 0;
+  top: 0;
+  right: -60%;
   bottom: 0;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .nav .nav-wrapper {
@@ -237,18 +209,9 @@ export default {
 }
 nav {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 nav a {
@@ -258,7 +221,6 @@ nav a {
   text-decoration: none;
   font-size: 1.5rem;
   letter-spacing: 3px;
-  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 nav a:first-child {
@@ -266,13 +228,11 @@ nav a:first-child {
 }
 #toggle:checked + .hamburger + .nav .nav-wrapper nav a {
   opacity: 0.9;
-  -webkit-transform: scale(1);
   transform: scale(1);
 }
 #toggle:checked + .hamburger + .nav .nav-wrapper nav a:hover {
   opacity: 1;
   color: #9696AA;
-  -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
