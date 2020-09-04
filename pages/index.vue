@@ -6,7 +6,7 @@
     <partners :partners="partners" />
     <works />
     <blog :blog="blog" />
-    <members />
+    <members :members="members" />
     <contact />
   </div>
 </template>
@@ -26,21 +26,25 @@ export default {
     const getNews = axios.get('https://steg.microcms.io/api/v1/news?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
     const getPartners = axios.get('https://steg.microcms.io/api/v1/partners?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
     const getBlog = axios.get('https://steg-blog.microcms.io/api/v1/article?limit=99', {headers: {"X-API-KEY": process.env.BLOG_API_KEY} });
+    const getMembers = axios.get('https://steg.microcms.io/api/v1/members?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
 
     let news_data;
     let partners_data;
     let blog_data;
+    let members_data;
 
-    await Promise.all([getNews, getPartners,getBlog]).then(function(values) {
+    await Promise.all([getNews, getPartners,getBlog,getMembers]).then(function(values) {
       news_data = values[0].data.contents
       partners_data = values[1].data.contents
       blog_data = values[2].data.contents
+      members_data = values[3].data.contents
     })
 
     return {
       news: news_data,
       partners: partners_data,
-      blog: blog_data
+      blog: blog_data,
+      members: members_data,
     }
   },
   components: {

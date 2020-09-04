@@ -51,6 +51,7 @@ export default {
 }
 
 .partners-container{
+    max-width: 1240px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -62,7 +63,7 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 40px 0 0;
-    margin: 0 50px;
+    margin: 0 45px;
     @include mq(lg) {
         width: 256px;
     }
