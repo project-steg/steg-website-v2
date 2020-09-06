@@ -39,7 +39,7 @@ export default {
         font-size: 2rem;
         font-weight: 700;
         color: $textColor;
-        border-bottom: 2px solid $mainColor;
+        border-bottom: 4px solid $mainColor;
     }    
 }
 

@@ -78,7 +78,7 @@ export default {
         font-weight: 700;
         color: $textColor;
         line-height: 1.5rem;
-        border-bottom: 2px solid $mainColor;
+        border-bottom: 4px solid $mainColor;
     }    
 }
 
@@ -115,6 +115,7 @@ export default {
         color: $textColor;
         border: solid 1px #9696aa;
         border-radius: 5px;
+        padding: 0 0.5rem;
         @include mq(md) {
             width: 100%;
         }
@@ -135,6 +136,7 @@ export default {
         border: solid 1px #9696aa;
         border-radius: 5px;
         resize: none;
+        padding: 0.25rem 0.5rem 0; 
         @include mq(md) {
             width: 100%;
         }
