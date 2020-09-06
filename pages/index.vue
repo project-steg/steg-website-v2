@@ -9,6 +9,7 @@
     <blog :blog="blog" />
     <members :members="members" />
     <contact />
+    <footerVue />
   </div>
 </template>
 
@@ -23,6 +24,7 @@ import works from "@/components/works.vue";
 import blog from "@/components/blog.vue";
 import members from "@/components/members.vue";
 import contact from "@/components/contact.vue";
+import footerVue from "@/components/footer.vue";
 export default {
   async asyncData() {
     const getNews = axios.get('https://steg.microcms.io/api/v1/news?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
@@ -59,6 +61,7 @@ export default {
     blog,
     members,
     contact,
+    footerVue,
   },
 }
 </script>
