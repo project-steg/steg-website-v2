@@ -3,7 +3,7 @@
         <div class="header-container">
         <div class="header-left">
             <nuxt-link tag="div" v-scroll-to="'#top'" to>
-            <img src="\img\Steg-logo.png" class="steg-logo" alt="Steg">
+            <img src="/img/Steg-logo.png" class="steg-logo" alt="Steg">
             </nuxt-link>
         </div>
         <div class="header-right">
@@ -60,7 +60,7 @@
         <div class="header-responsive">
         <div class="header-left">
             <nuxt-link tag="div" v-scroll-to="'#top'" to>
-            <img src="\img\Steg-logo.png" class="steg-logo" alt="Steg">
+            <img src="/img/Steg-logo.png" class="steg-logo" alt="Steg">
             </nuxt-link>
         </div>
         <input id="toggle" type="checkbox" />
