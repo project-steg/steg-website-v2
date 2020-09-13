@@ -4,7 +4,7 @@
         <div class="partners-heading-jp">協力団体</div>
         <div class="partners-container">
             <div class="partners-content" v-for="elem in partners" :key="elem.id">
-                <a :href="elem.partnersUrl" target="_blank" rel="noopener noreferrer">
+                <a :href="elem.partnersUrl" target="_blank" rel="noopener">
                     <div class="partners-content-img"><img :src="elem.partnersImg.url" :alt="elem.partnersName"></div>
                 </a>
                 <div class="partners-content-name">{{elem.partnersName}}</div>

@@ -5,7 +5,7 @@
             <div class="works-heading-jp">制作実績</div>
         </div>
         <div class="works-container">
-            <a class="works-content" :href="elem.worksUrl" v-for="elem in works" :key="elem.id" target="_blank" rel="noopener noreferrer">
+            <a class="works-content" :href="elem.worksUrl" v-for="elem in works" :key="elem.id" target="_blank" rel="noopener">
                 <img :src="elem.worksImg.url" :alt="elem.worksTitle" class="works-content-img">
                 <div class="works-content-item">
                     <div class="works-name">{{elem.worksTitle}}</div>

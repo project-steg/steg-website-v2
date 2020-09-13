@@ -5,7 +5,7 @@
         <input id="trigger1" class="grad-trigger" type="checkbox">
         <div class="grad-item">
             <div class="members-container">
-                <a class="members-content" :href="elem.website" target="_blank" rel="noopener noreferrer" v-for="elem in members" :key="elem.id">
+                <a class="members-content" :href="elem.website" target="_blank" rel="noopener" v-for="elem in members" :key="elem.id">
                     <img :src="elem.img.url" class="members-content-img" :alt="elem.name">
                     <div class="members-content-text">
                         <p class="members-content-position">{{elem.position}}</p>

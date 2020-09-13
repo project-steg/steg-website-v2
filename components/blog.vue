@@ -5,13 +5,13 @@
                 <div class="blog-heading-en"><h2>BLOG</h2></div>
                 <div class="blog-heading-jp">ブログ</div>
             </div>
-            <a class="blog-viewmore2" href="https://blog.team-steg.com/" target="_blank" rel="noopener noreferrer">
+            <a class="blog-viewmore2" href="https://blog.team-steg.com/" target="_blank" rel="noopener">
                 <div class="blog-viewmore-text">VIEW MORE</div>
                 <div class="blog-viewmore-arrow"></div>
             </a>
         </div>
         <div class="blog-container">
-            <a class="blog-content" :href='"https://blog.team-steg.com/articles/" + elem.id' target="_blank" rel="noopener noreferrer" v-for="elem in filteredItems(blog)" :key="elem.id">
+            <a class="blog-content" :href='"https://blog.team-steg.com/articles/" + elem.id' target="_blank" rel="noopener" v-for="elem in filteredItems(blog)" :key="elem.id">
                 <img :src="elem.image.url" :alt="elem.title">
                 <div class="blog-content-items">
                     <div class="blog-content-information">
@@ -23,7 +23,7 @@
             </a>     
 
         </div>
-        <a class="blog-viewmore1" href="https://blog.team-steg.com/" target="_blank" rel="noopener noreferrer">
+        <a class="blog-viewmore1" href="https://blog.team-steg.com/" target="_blank" rel="noopener">
             <div class="blog-viewmore-text">VIEW MORE</div>
             <div class="blog-viewmore-arrow"></div>
         </a>
