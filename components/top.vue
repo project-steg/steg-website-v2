@@ -12,9 +12,9 @@
                 <div class="main-visual-container">
                     <div class="main-visual-tagline">
                         <div class="tagline-container">
-                            <div class="tagline-jp"><span>学生の</span><span class="main-color">未来</span><span>に自由な選択肢を</span></div>
-                            <div class="tagline-en"><span>FREE CHOICE FOR</span></div>
-                            <div class="tagline-en"><span>STUDENTS' </span><span class="main-color">FUTURE</span></div>
+                            <div class="tagline-jp">学生の<span>未来</span>に自由な選択肢を</div>
+                            <div class="tagline-en">FREE CHOICE FOR</div>
+                            <div class="tagline-en">STUDENTS' <span>FUTURE</span></div>
                         </div>
                     </div>
                 </div>
@@ -130,29 +130,30 @@ export default {
 
 .tagline-jp{
     display: flex;
+    font-size: 1.2rem;
+    color: $subColor;
     span{
         font-size: 1.2rem;
-        color: $subColor;
-    }
-    .main-color{
         color: $mainColor;
     }
 }
 
 .tagline-en{
     display: flex;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $subColor;
+    @include mq(sm) {
+        font-size: 2rem;
+    }
     span{
         font-size: 3rem;
         font-weight: 700;
-        color: $subColor;
+        color: $mainColor;
         @include mq(sm) {
             font-size: 2rem;
         }
     }
-    .main-color{
-        color: $mainColor;
-    }
 }
-
 
 </style>
