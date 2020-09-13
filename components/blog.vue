@@ -34,14 +34,17 @@
 import dayjs from 'dayjs';
 export default {
     props: ["blog"],
-    methods: {
-        formatDate (date) {
-            return dayjs(date).format("YYYY.MM.DD");
+    computed: {
+        formatDate: function() {
+            return function(date) {
+                return dayjs(date).format("YYYY.MM.DD");
+            }
         },
-        filteredItems: function (blog) {
-            return this.blog.slice(0, 3)
-        }
-
+        filteredItems: function() {
+            return function (blog) {
+                return this.blog.slice(0, 3);
+            }
+        },
     },
 }
 </script>
