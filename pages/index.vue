@@ -1,6 +1,6 @@
 <template>
   <div>
-    <headerVue />
+    <mainHeader />
     <top />
     <news :news="news" />
     <about />
@@ -9,13 +9,13 @@
     <blog :blog="blog" />
     <members :members="members" />
     <contact />
-    <footerVue />
+    <mainFooter />
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import headerVue from "@/components/header.vue";
+import mainHeader from "@/components/header.vue";
 import top from "@/components/top.vue";
 import news from "@/components/news.vue";
 import about from "@/components/about.vue";
@@ -24,7 +24,7 @@ import works from "@/components/works.vue";
 import blog from "@/components/blog.vue";
 import members from "@/components/members.vue";
 import contact from "@/components/contact.vue";
-import footerVue from "@/components/footer.vue";
+import mainFooter from "@/components/footer.vue";
 export default {
   async asyncData() {
     const getNews = axios.get('https://steg.microcms.io/api/v1/news?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
@@ -56,7 +56,7 @@ export default {
     }
   },
   components: {
-    headerVue,
+    mainHeader,
     top,
     news,
     about,
@@ -65,7 +65,7 @@ export default {
     blog,
     members,
     contact,
-    footerVue,
+    mainFooter,
   },
 }
 </script>
