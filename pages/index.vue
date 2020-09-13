@@ -39,7 +39,7 @@ export default {
     let members_data;
     let works_data;
 
-    await Promise.all([getNews, getPartners,getBlog,getMembers,getWorks]).then(function(values) {
+    await Promise.all([getNews, getPartners,getBlog,getMembers,getWorks]).then(values => {
       news_data = values[0].data.contents
       partners_data = values[1].data.contents
       blog_data = values[2].data.contents
