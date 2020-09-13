@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { API_KEY } = process.env;
+const { API_KEY, BLOG_API_KEY } = process.env;
 
 export default {
   /*
@@ -77,6 +77,7 @@ export default {
   build: {
   },
   env: {
-    API_KEY
+    API_KEY,
+    BLOG_API_KEY
   }
 }
