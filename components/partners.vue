@@ -64,6 +64,9 @@ export default {
     align-items: center;
     padding: 40px 0 0;
     margin: 0 45px;
+    a{
+        text-decoration: none;
+    }
     @include mq(lg) {
         width: 256px;
     }
