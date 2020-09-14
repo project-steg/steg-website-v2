@@ -65,7 +65,7 @@ export default {
     padding: 40px 0 0;
     margin: 0 45px;
     a{
-        text-decoration: none;
+        color: rgba($mainColor,0.5);
     }
     @include mq(lg) {
         width: 256px;
@@ -85,7 +85,6 @@ export default {
     align-items: center;
     justify-content: center;
     border: 10px solid rgba($mainColor,0.5);
-    text-decoration: none;
     border-radius: 50%;
     @include mq(lg) {
         width: 240px;
