@@ -1,5 +1,5 @@
 {
-  "name": "stegHP",
+  "name": "steg",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,15 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.14.0"
+    "@nuxtjs/dotenv": "^1.4.1",
+    "axios": "^0.19.2",
+    "dayjs": "^1.8.34",
+    "nuxt": "^2.14.0",
+    "vue-scrollto": "^2.18.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3"
+  }
 }

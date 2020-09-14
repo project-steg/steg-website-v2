@@ -1,0 +1,57 @@
+$breakpoints: (
+  "sm": "screen and (max-width: 480px)",
+  "md": "screen and (max-width: 896px)",
+  "lg": "screen and (max-width: 1024px)",
+  "xl": "screen and (max-width: 1240px)"
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* how to use
+@include mq(md) {
+    css
+}
+*/
+
+$textColor: #17171b;
+$mainColor: #20d8ba;
+$subColor: #46465d;
+$bgColor: #f8f8fc;
+
+@include mq(lg){ /*タブレット縦*/
+  html, body, div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  abbr, address, cite, code,
+  del, dfn, em, img, ins, kbd, q, samp,
+  small, strong, sub, sup, var,
+  b, i,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section, summary,
+  time, mark, audio, video {
+      font-size: 14px;
+  }
+}
+
+@include mq(sm){/*スマホ縦*/
+  html, body, div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  abbr, address, cite, code,
+  del, dfn, em, img, ins, kbd, q, samp,
+  small, strong, sub, sup, var,
+  b, i,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section, summary,
+  time, mark, audio, video {
+      font-size: 13px;
+  }
+}
