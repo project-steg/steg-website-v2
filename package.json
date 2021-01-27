@@ -9,11 +9,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/dotenv": "^1.4.1",
-    "axios": "^0.19.2",
-    "dayjs": "^1.8.34",
-    "nuxt": "^2.14.0",
-    "vue-scrollto": "^2.18.2"
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
+    "nuxt": "^2.14.12",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
