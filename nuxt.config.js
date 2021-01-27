@@ -1,12 +1,9 @@
-require('dotenv').config();
-const { API_KEY, BLOG_API_KEY } = process.env;
-
 export default {
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'universal',
+  ssr: 'true',
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -76,8 +73,8 @@ export default {
   },
   build: {
   },
-  env: {
-    API_KEY,
-    BLOG_API_KEY
+  publicRuntimeConfig: {
+    API_KEY: process.env.API_KEY,
+    BLOG_API_KEY: process.env.BLOG_API_KEY
   }
 }

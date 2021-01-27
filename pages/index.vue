@@ -26,12 +26,26 @@ import members from "@/components/members.vue";
 import contact from "@/components/contact.vue";
 import mainFooter from "@/components/footer.vue";
 export default {
-  async asyncData() {
-    const getNews = axios.get('https://steg.microcms.io/api/v1/news?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
-    const getPartners = axios.get('https://steg.microcms.io/api/v1/partners?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
-    const getBlog = axios.get('https://steg-blog.microcms.io/api/v1/article?limit=99', {headers: {"X-API-KEY": process.env.BLOG_API_KEY} });
-    const getMembers = axios.get('https://steg.microcms.io/api/v1/members?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
-    const getWorks = axios.get('https://steg.microcms.io/api/v1/works?limit=99', {headers: {"X-API-KEY": process.env.API_KEY} });
+  async asyncData({ $config: { API_KEY, BLOG_API_KEY } }) {
+    const getNews = axios.get("https://steg.microcms.io/api/v1/news?limit=99", {
+      headers: { "X-API-KEY": API_KEY },
+    });
+    const getPartners = axios.get(
+      "https://steg.microcms.io/api/v1/partners?limit=99",
+      { headers: { "X-API-KEY": API_KEY } }
+    );
+    const getBlog = axios.get(
+      "https://steg-blog.microcms.io/api/v1/article?limit=99",
+      { headers: { "X-API-KEY": BLOG_API_KEY } }
+    );
+    const getMembers = axios.get(
+      "https://steg.microcms.io/api/v1/members?limit=99",
+      { headers: { "X-API-KEY": API_KEY } }
+    );
+    const getWorks = axios.get(
+      "https://steg.microcms.io/api/v1/works?limit=99",
+      { headers: { "X-API-KEY": API_KEY } }
+    );
 
     let news_data;
     let partners_data;
@@ -39,13 +53,19 @@ export default {
     let members_data;
     let works_data;
 
-    await Promise.all([getNews, getPartners,getBlog,getMembers,getWorks]).then(values => {
-      news_data = values[0].data.contents
-      partners_data = values[1].data.contents
-      blog_data = values[2].data.contents
-      members_data = values[3].data.contents
-      works_data = values[4].data.contents
-    })
+    await Promise.all([
+      getNews,
+      getPartners,
+      getBlog,
+      getMembers,
+      getWorks,
+    ]).then((values) => {
+      news_data = values[0].data.contents;
+      partners_data = values[1].data.contents;
+      blog_data = values[2].data.contents;
+      members_data = values[3].data.contents;
+      works_data = values[4].data.contents;
+    });
 
     return {
       news: news_data,
@@ -53,7 +73,7 @@ export default {
       blog: blog_data,
       members: members_data,
       works: works_data,
-    }
+    };
   },
   components: {
     mainHeader,
@@ -67,9 +87,8 @@ export default {
     contact,
     mainFooter,
   },
-}
+};
 </script>
 
 <style lang="scss">
-
 </style>
