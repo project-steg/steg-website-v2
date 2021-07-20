@@ -4,7 +4,7 @@
             <div class="about-img"></div>
             <div class="about-steg">
                 <div class="about-heading"><h2>ABOUT</h2></div>
-                <div class="about-introduction">Stegは、ITエンジニアリングなどを通して社会に挑戦し、成長の過程を大切にする学生ITエンジニア団体です</div>
+                <div class="about-introduction">合同会社Stegは、ITエンジニアリングの力で社会に貢献し、成長の過程を大切にする会社です。</div>
             </div>
         </div>
         <div class="about-container">
