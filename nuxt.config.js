@@ -14,16 +14,16 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: 'Steg公式ホームページ',
+    title: '合同会社Steg 公式ホームページ',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '学生ITエンジニア団体「Steg」公式ホームページ。Web制作案件の受託や、iOSアプリ開発の受託などを行なっています。学生がエンジニアリングを通して、社会に様々な挑戦をしていきます。' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Steg公式ホームページ' },
+      { hid: 'description', name: 'description', content: '合同会社Steg 公式ホームページ。Web制作案件の受託や、iOSアプリ開発の受託などを行なっています。' },
+      { hid: 'og:site_name', property: 'og:site_name', content: '合同会社Steg 公式ホームページ' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://team-steg.com' },
-      { hid: 'og:title', property: 'og:title', content: 'Steg公式ホームページ' },
-      { hid: 'og:description', property: 'og:description', content: '学生ITエンジニア団体「Steg」公式ホームページ。Web制作案件の受託や、iOSアプリ開発の受託などを行なっています。学生がエンジニアリングを通して、社会に様々な挑戦をしていきます。' },
+      { hid: 'og:title', property: 'og:title', content: '合同会社Steg 公式ホームページ' },
+      { hid: 'og:description', property: 'og:description', content: '合同会社Steg 公式ホームページ。Web制作案件の受託や、iOSアプリ開発の受託などを行なっています。' },
       { hid: 'og:image', property: 'og:image', content: 'https://team-steg.com/img/ogp.jpg' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:site', name: 'twitter:site', content: '@Steg_official' },
