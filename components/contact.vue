@@ -3,18 +3,23 @@
         <div class="contact-container">
             <div class="contact-heading"><h2>CONTACT</h2></div>
             <div class="contact-exposition">Webページ作成、LP作成等承っております。<br>ご依頼やご相談はこちらのフォームにてお願いします。</div>
-            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfekmFwZc4Lr3STHXnoHMkbgsxeyiGvUxABxhXf28Sx795gcg/formResponse" method="POST">
+            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 <div class="form-contents">
                     <p>氏名(必須)</p>
-                    <input type="text" placeholder="氏名" name="entry.1220325291" required />
+                    <input type="text" placeholder="氏名" name="name" required />
                 </div>
                 <div class="form-contents">
                     <p>メールアドレス(必須)</p>
-                    <input type="email" placeholder="example@mail.com" name="entry.222640255" required />
+                    <input type="email" placeholder="example@mail.com" name="email" required />
                 </div>
                 <div class="form-contents">
                     <p>お問い合わせ内容(必須)</p>
-                    <textarea placeholder="お問い合わせ内容" name="entry.264940659" required ></textarea>
+                    <textarea placeholder="お問い合わせ内容" name="message" required ></textarea>
+                </div>
+                <div v-show="false">
+                    <label for="bot">スパムでない場合は空欄</label>
+                    <input id="bot" type="text" name="bot-field" />
                 </div>
                 <button type="submit" class="form-button">送信</button>
             </form>
@@ -62,6 +67,7 @@ export default {
         align-items: center;
         justify-content: center;
         margin: 80px auto 0;
+        cursor: pointer;
         @include mq(lg) {
             margin: 60px auto 0;
         }
